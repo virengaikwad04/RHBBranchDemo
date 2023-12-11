@@ -1,0 +1,121 @@
+body {
+    background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;
+    margin: 0;
+    font-family: Poppins;
+    height:100vh;
+
+}
+
+/* .header{
+    width: 100%;
+    height:10vh;
+    
+    color:#222;
+    border-collapse:collapse;
+    margin:auto;
+    align-content: space-between;
+    overflow: hidden;
+} */
+/* .header-right {
+    float: right;  
+  } */
+
+ /* a{
+    cursor: pointer;
+ }
+  */
+/* .header a {
+    width: 8%;
+    background: transparent;
+    width:100px;
+    height:30px;
+
+    float: left;
+    color: black;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border-color: none;
+    
+    border-radius: 4px;
+    
+  }  */
+
+ 
+ 
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+.img{
+    width: 13%;
+    padding-top: 40px;
+  
+    
+}
+
+ 
+.card {
+    
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: center;text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    
+ 
+
+    /* box-shadow:  0px 10px 30px #00000029; */
+}
+
+@media (max-width: 600px) {
+    /* Adjust styles for smaller screens (e.g., mobile devices) */
+    .card {
+        width: 80%;
+    }
+
+    
+    /* .header{
+         
+        width: 100%;
+        height:5vh;
+       
+        color:#222;
+        border-collapse:collapse;
+         
+        align-content: space-between;
+        overflow: hidden;
+    }
+
+    .header a {
+        width: 4%;
+        background: transparent;
+        width:50px;
+        height:15px;
+    
+        float: left;
+        color: black;
+        text-align: center;
+        padding-top: 7.5px;
+        text-decoration: none;
+        font-size: 9px;
+        border-color: none;
+        
+        border-radius: 2px;
+        
+      } 
+
+      .header img{
+        width:15%;
+        height:5vh
+    } */
+}

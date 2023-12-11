@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+       <title>Welcome</title>
+       <link rel="stylesheet" type="text/css" href="./css/style.css" />
+       <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+       <meta content="JavaScript" name="vs_defaultClientScript">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+    <body bottomMargin="10" leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout" 
+    style="overflow-y: hidden;background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;">
+        
+    <!-- <div class="header" style="width: 100%;height:10vh;border-collapse:collapse;margin:auto;align-content: space-between;">
+        <img style="width:10% ;height:70%; margin-left: 50px;" src="../images/RHBLogo.png">
+         <div class="header-right" style="margin: 5px 40px 0px 0px;">
+            <a>
+                <i style="color: white;"class="fa fa-home"> Home
+                </i>
+            </a>
+            <a>
+                <i style="color: white;"class="fa fa-qrcode"> Scan QR
+                </i>
+            </a>
+         </div>             
+    </div> 
+    <hr>     -->
+    
+    <img src="./images/RHBLogo.png" class="img">
+    
+        <br>
+        <br>
+        
+        <div class="main-container">          
+            
+            <div class="left-container">        
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                    <img src="./images/1.png" style="width:100%;height:100%">
+                    </div>                    
+                    <div class="mySlides fade">
+                    <img src="./images/2.png" style="width:100%;height:100%">
+                    </div>                    
+                </div> 
+            </div>      
+            <div class="right-container">
+                 <div style="color: white; background-color:#00667E; height:40px ; text-align: center; margin-bottom: 10px; border-radius: 5px; margin-left: 10px;" >
+                     <h4 style="padding-top:7px; font-family: Poppins">Welcome to RHB Bank</h4>
+                </div>
+                <div style="margin: 10px 0 0 20px; padding-top: 10px;">
+                <img src="./images/QRCode.png" alt="QRCode" style="width: 80%;height: 180px;">
+                </div>
+                <div style="color: white;margin-left: 20px;">
+                <p>__________ or __________</p>                  
+                <h3 style=" padding: 10px 0px 10px 10px; font-family: Poppins">Printed Ticket<a href="./second.html">
+				<i class="fa fa-arrow-circle-right" style="font-size:20px;color:white"></i></a></h3>
+                <p>__________ or __________</p>
+                </div>
+				<a class="get-ticket" style="font-family: Poppins">Enter Mobile Number to get Ticket</a>  				
+                
+            </div> 
+        </div>
+        <div style="text-align:right">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <!--<span class="dot"></span> -->
+        </div>
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        </script>
+            
+    </body>
+</HTML>
