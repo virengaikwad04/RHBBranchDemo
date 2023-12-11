@@ -1,0 +1,789 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    
+    
+
+<HEAD>
+    <title>Create OnLIne Case</title>
+    <link rel="stylesheet" type="text/css" href="./css/addres.css" />
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</HEAD>
+    
+    <style>
+        body {
+           
+            font-family: Poppins;
+            background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;
+
+        }
+
+    /* .header {
+      background-color: #70cde3; 
+      padding: 10px; 
+    }  */
+
+    .logo {
+      width: 150px; 
+      height: auto; 
+      display: block; 
+    }
+  </style>
+
+<body>
+    <!-- <div class="header" style="width: 100%;height:3vh;border-collapse:collapse;margin:auto;align-content: space-between;">
+        <img src="../images/RHBLogo.png" style="width: 15%;">
+         <div class="header-right" style="margin: 5px 40px 0px 0px;">
+            <a>
+                <i style="color: white;"class="fa fa-home"> Home
+                </i>
+            </a>
+            <a>
+                <i style="color: white;"class="fa fa-qrcode"> Scan QR
+                </i>
+            </a>
+         </div>             
+    </div> 
+
+    <hr> -->
+
+
+
+       
+        <div class="container">
+
+            <img src="images/RHBLogo.png" class="img">
+
+            <!--<div class="heading">Address Change Portal</div>-->
+            
+            
+            <form id="OnLineCaseForm" method="post" action="https://presales.businessbywire.com/appgb8/ProcessAnonymous/OnlineLeadCapture?x=s2rsuht9cnx3lyqqcnda6spl7xqlzqe2q8rpxsggexqrtsb79plj2thmthlv35jq784ut4pwm3b85uwrrkdenh63z9qpumudlzysns32wawwcszfywva" class="form">
+                <input type="hidden" name="debug" value="1"> 
+                <input type="hidden" name="debugEmail" value="marketing@businessnext.co.in"> <input type=hidden name="SuccessReturnURL" value="thank.html"> <input type=hidden name="FailureReturnURL" value="http://www.google.com">
+        
+                <label class="input_label" for="email_field" hidden>Subject</label>
+                <input required="" class="input" type="text" name="Subject" id="Subject" placeholder="Subject" value="Request for Address Change" hidden>
+                <label class="input_label" for="email_field" hidden>Product</label>
+                <select class="input" name="Product" onchange="UpdateProductName();" hidden>
+                    <option value="112" selected>Savings Account</option>
+                </select>
+                <label class="input_label" hidden>Case Type</label>
+                <select class="input" id="CaseType" name="CaseType " hidden>
+                    <option value="0">CaseType</option>
+                    <option value="1">Query</option>
+                    <option value="2" selected>Request</option>
+                    <option value="3">Complaint</option>
+                </select>
+                <label class="input_label" hidden>CaseReason</label>
+                <select class="input" name="CaseReason" hidden>
+                    <option value="0">CaseReason</option>
+                    <option value="1">New Problem</option>
+                    <option value="2">Existing Problem</option>
+                    <option value="6" selected>New Request</option>
+                    <option value="3">Complex Functionality</option>
+                    <option value="4">Unclear Instructions</option>
+                    <option value="5">Not Trained</option>
+                </select>
+                
+              
+                
+                <select id="CasePriority" name="CasePriority" style="width:80%" hidden>
+                    <option value="0">None</option>
+                    <option value="1" selected>ASAP</option>
+                    <option value="2">High</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Low</option>
+                </select>
+                <select id="CaseOrigin" name="CaseOrigin" style="width:80%" hidden>
+                    <option value="0"></option>
+                    <option value="1">Email</option>
+                    <option value="7">email</option>
+                    <option value="6">Referal</option>
+                    <option value="2" selected>Web Form</option>
+                    <option value="3">Phone</option>
+                    <option value="4">Fax</option>
+                    <option value="5">Meeting</option>
+                </select>
+                <select id="CaseSolutionCategory" name="CaseSolutionCategory" style="width:80%" hidden>
+                    <option value="8" selected>Complaint</option>
+                </select>
+
+                <label class="input_label" for="email_field" hidden>CaseLayout</label>
+                <input type="text" id="Layout" name="Layout" style="width:80%" hidden>
+
+                <label class="input_label" for="email_field" hidden>CaseLayout</label>
+                <select id="Layout" name="Layout" style="width:80%" hidden>
+                    <option value="102676" selected>Service Requests</option>
+                </select>
+                 <select id="StatusCode" name="StatusCode" style="width:80%" hidden>
+                    <option value="100017" selected>Assigned to FFU</option>
+                </select>
+                
+                <input type="text" id="Company" name="Company" value="Mr. Azman" hidden/>
+
+
+                <div>
+                    <h3>
+                        <div class="h3headerclass">
+                            <div class="iconimgclass">
+                                <img class="logo" src="./images/iconNew.png" alt="Your Logonew" style="width:40px;">
+                            </div>
+                            <div class="bottomclass">
+                                <label class="input_label" style="font-size:18px;">
+                                    Personal Information
+                                    </label>
+                            </div>
+                        </div>
+                    </h3>
+                    <hr/>
+                    <label class="input_label" for="email_field">Name of Account Holder</label>
+                    <input required="" class="input" type="text" name="cust_2405" id="cust_2405" value="Mr. Azman" placeholder="Name of Account Holder" readonly>
+
+                    
+
+                    <label class="input_label" for="email_field">Mobile Number</label>
+                    <input required="" class="input" type="text" name="cust_2951" id="cust_2951" value="02887938939" placeholder="Mobile Number" readonly>
+
+                    <label class="input_label" for="email_field">Email Address</label>
+                    <input required="" class="input" type="text" name="cust_2955" id="cust_2955" value="azman@gmail.com" placeholder="Email Address" readonly>
+
+                </div>
+
+                <div>
+                    <h3>
+                        <div class="h3headerclass">
+                            <div class="iconimgclass">
+                                <img class="logo" src="./images/currAdd.png" alt="Your Logonew" style="width:40px;">
+                            </div>
+                            <div class="bottomclass">
+                                <label class="input_label" style="font-size:18px;"> Current Address</label>
+                            </div>
+                        </div>
+
+                    </h3>
+                    <hr />
+                <label class="input_label" for="email_field" readonly> Street Address</label>
+                <input required="" class="input" type="text" name="cust_11530" id="cust_11530" value="Kantin Kamsis Tun Dr Ismail Jln Temerloh" placeholder="Address" readonly>
+
+                <label class="input_label" for="email_field" readonly>City</label>
+                <input required="" class="input" type="text" value="Kuala Lumpur" placeholder="City" readonly>
+
+                <label class="input_label" for="email_field" readonly>State</label>
+                <input required="" class="input" type="text" value="Kuala Lumpur" placeholder="State" readonly>
+
+                <label class="input_label" for="email_field" readonly>Zip Code</label>
+                <input required="" class="input" type="text" value="53200" placeholder="Zip Code" readonly>
+</div>
+
+        <div>
+            <h3>
+                <div class="h3headerclass">
+                    <div class="iconimgclass">
+                        <img class="logo" src="./images/newAdd.png" alt="Your Logonew" style="width:40px;">
+                    </div>
+                    <div class="bottomclass">
+                        <label class="input_label" style="font-size:18px;">
+                            New Address
+                            </label>
+                    </div>
+
+                </div>
+
+            </h3>
+            <hr />
+                    <label class="input_label" for="email_field">Street Address</label>
+                    <input class="input" type="text" name="cust_24" id="cust_24" placeholder="Address">
+
+                    <label class="input_label" for="email_field">City</label>
+                    <input class="input" type="text" name="cust_3099" id="cust_3099" placeholder="City">
+
+                    <label class="input_label" for="email_field">State</label>
+                    <input class="input" type="text" name="cust_3105" id="cust_3105" placeholder="State">
+
+                    <label class="input_label" for="email_field">Zip Code</label>
+                    <input class="input" type="text" name="cust_3102" id="cust_3102" placeholder="Zip Code">
+
+                </div>
+
+        <div>
+            <h3>
+                <div class="h3headerclass">
+                    <div class="iconimgclass">
+                        <img class="logo" src="./images/effeDate.png" alt="Your Logonew" style="width:40px;">
+                    </div>
+                    <div class="bottomclass">
+                        <label class="input_label" style="font-size:18px;">
+                            Effective Date of Change of Address
+                            </label>
+</div>
+                </div>
+            </h3>
+            <hr />
+            <label class="input_label" for="email_field">Date</label>
+            <input class="input" type="date" name="Ecust_3558" id="cust_3558" placeholder="EMI Date" min="1997-01-01" max="2030-12-31">
+
+        </div>
+
+
+                
+
+                <!--  <tr>
+          <td hidden> CaseLayout :&nbsp; </td>
+          <td><input type="text" id="Layout" name="Layout" style="width:80%" hidden></td>
+          <td hidden> Layout </td>
+          <td hidden>
+              <select id="Layout" name="Layout" style="width:80%" hidden>
+                  <option value="102676" selected>Service Requests</option>
+              </select>
+
+          </td>
+          <td hidden>
+              <input type="text" id="Company" name="Company" value="Mr. Azman" />
+
+          </td>
+      </tr>-->
+
+
+                <input class="login-button" type="submit" value="SUBMIT" onclick="return IsValidForm(); window.location.href = 'thank.html';">
+               
+<!--   -->
+            </form>
+
+        <span class="agreement"><a href="#">Learn user licence agreement</a></span>
+        </div>
+
+
+
+        <!--  <form id="OnLineCaseForm" method="post" action="https://presales.businessbywire.com/appgb8/ProcessAnonymous/OnlineLeadCapture?x=s2rsuht9cnx3lyqqcnda6spl7xqlzqe2q8rpxsggexqrtsb79plj2thmthlv35jq784ut4pwm3b85uwrrkdenh63z9qpumudlzysns32wawwcszfywva"> <input type="hidden" name="debug" value="1"> <input type="hidden" name="debugEmail" value="marketing@businessnext.co.in"> <input type=hidden name="SuccessReturnURL" value="http://www.rhbgroup.com/index.html"> <input type=hidden name="FailureReturnURL" value="http://www.google.com">
+          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                  <td width="100%" height="100%" valign="top">
+                      <table cellSpacing="0" cellPadding="0" width="100%" border="0">
+                          <colgroup>
+                              <col align="right" width="20%" />
+                              <col width="30%" />
+                              <col align="right" width="20%" />
+                              <col width="30%" />
+                          </colgroup>
+
+              <tr>
+                  <td> Subject :&nbsp; </td>
+                  <td><input type="text" id="Subject" name="Subject" style="width:100px" /></td>
+
+              </tr>
+              <tr>
+
+                  <td>Product</td>
+                  <td> <select id="Product" name="Product" onchange="UpdateProductName();" style="width:100px">
+                          <option value="1321">Aaelaty Bi Aman</option>
+                          <option value="1000080">Account</option>
+                          <option value="1228">AL Jawhara</option>
+                          <option value="1000040">American Express Platinum Edge Credit Card</option>
+                          <option value="1000037">American Express Platinum Edge Credit Card</option>
+                          <option value="1306">Arab Ba nk Visa Signature Credit Card</option>
+                          <option value="1303">Arab Bank Visa Platinum Credit Card</option>
+                          <option value="1309">Arabi Extra Program</option>
+                          <option value="130">ATM Debit Cards</option>
+                          <option value="1000083">Auto Financing</option>
+                          <option value="140">Auto Insurance</option>
+                          <option value="1000112">Basic Current Account</option>
+                          <option value="1000107">Basic Savings Account</option>
+                          <option value="127">Basic Savings Account</option>
+                          <option value="132">Bills Pay Facility</option>
+                          <option value="149">Bonds</option>
+                          <option value="1000098">Bonds</option>
+                          <option value="1000110">Bonus Saver Account</option>
+                          <option value="1177">Business Loan</option>
+                          <option value="1223">c-accounts</option>
+                          <option value="1224">c-cash management</option>
+                          <option value="1000038">Cebu Pacific GetGo Platinum Credit Card</option>
+                          <option value="1000041">Cebu Pacific GetGo Platinum Credit Card</option>
+                          <option value="1174">Cheque Max</option>
+                          <option value="1220">c-investment</option>
+                          <option value="1217">C-Investment</option>
+                          <option value="1000058">Consumer Loan</option>
+                          <option value="128">Cool Savers Kiddie Account</option>
+                          <option value="1000020">Corporate</option>
+                          <option value="1260">Corporate Auto Finance</option>
+                          <option value="1262">Corporate Auto Lease</option>
+                          <option value="1250">Corporate Credit Card</option>
+                          <option value="1180">Corporate Loan</option>
+                          <option value="1287">Corporate Payroll Account</option>
+                          <option value="126">Corporate Salary Account</option>
+                          <option value="1290">Coupon Bearing Bond</option>
+                          <option value="1000008">Credit Card</option>
+                          <option value="1000064">Credit Card Offers</option>
+                          <option value="1000062">Credit Card Protection Cover Benefits</option>
+                          <option value="1000079">Credit Cards</option>
+                          <option value="1288">Cross Currency Swap</option>
+                          <option value="1222">C-tradefinacne</option>
+                          <option value="1218">C-treasury</option>
+                          <option value="1178">Current Account</option>
+                          <option value="1307">Current Account</option>
+                          <option value="1000072">Current Deposit Products</option>
+                          <option value="1000007">Debit Card</option>
+                          <option value="1000089">Debt Funds</option>
+                          <option value="1000087">Debt Funds</option>
+                          <option value="1175">Defence Salary Account</option>
+                          <option value="1247">Demat Account</option>
+                          <option value="1254">Diners Club</option>
+                          <option value="1000097">Direct Equity</option>
+                          <option value="156">Direct Equity Investment</option>
+                          <option value="1172">DLSAA Master Card</option>
+                          <option value="1326">Drafts - Outward</option>
+                          <option value="1327">Drafts Purchase/Collection</option>
+                          <option value="1264">E Banking</option>
+                          <option value="131">East West Travel Money</option>
+                          <option value="134">Easy Investment Plan</option>
+                          <option value="1232">Education Loans</option>
+                          <option value="1252">Emirates Gold Credit Cards</option>
+                          <option value="1301">Emirates MasterCard Titanium Credit Card</option>
+                          <option value="1300">Emirates Royal Jordanian Visa Credit Card</option>
+                          <option value="1298">Emirates Visa Black Credit Card</option>
+                          <option value="1297">Emirates Visa Gold Credit Card</option>
+                          <option value="1296">Emirates Visa Silver Credit Card</option>
+                          <option value="1302">Emirates World MasterCard Credit Card</option>
+                          <option value="1299">Emirates- Zain Visa Credit Card</option>
+                          <option value="1000066">eMyHassad</option>
+                          <option value="159">Engineering Insurance</option>
+                          <option value="1246">Equity Funds</option>
+                          <option value="1000088">Equity Funds</option>
+                          <option value="1000031">Equity Release</option>
+                          <option value="154">Equity Underwriting</option>
+                          <option value="1171">EW Master Card</option>
+                          <option value="153">Export Bill Purchase</option>
+                          <option value="1312">Fixed Deposit - Foreign Currencies</option>
+                          <option value="1291">Fixed Deposit Account</option>
+                          <option value="1311">Fixed Deposit- JOD</option>
+                          <option value="155">Fixed Income Underwriting</option>
+                          <option value="1325">Foreign Currency Buy/Sell</option>
+                          <option value="1272">FOREX</option>
+                          <option value="148">FOREX</option>
+                          <option value="1263">FOREX</option>
+                          <option value="1248">Forex Card</option>
+                          <option value="1000059">Gold &amp; Classic Card</option>
+                          <option value="1280">Gold Acct</option>
+                          <option value="1000056">Gold Loan</option>
+                          <option value="1323">Hatta Yedersou</option>
+                          <option value="1243">Health Insurance</option>
+                          <option value="1000084">Home Financing</option>
+                          <option value="141">Home Insurance</option>
+                          <option value="1275">Home loan</option>
+                          <option value="1276">Home loan</option>
+                          <option value="1277">Home loan</option>
+                          <option value="1278">Home loan</option>
+                          <option value="1000005">Home Loan Balance Transfer</option>
+                          <option value="1000004">Home Loan Top Up</option>
+                          <option value="1170">Hyundai Master Card</option>
+                          <option value="1000002">ICICI Personal Loan</option>
+                          <option value="1000003">ICICI Pru iProtect Smart</option>
+                          <option value="1285">IDBI Bank Cash Card</option>
+                          <option value="1245">Ijara Funds</option>
+                          <option value="1000101">Independent credit card</option>
+                          <option value="1165">Independent Debit Card</option>
+                          <option value="1167">Individual Debit Card</option>
+                          <option value="144">Individual Debit Card</option>
+                          <option value="111">IndusStox 3-in-1 Account</option>
+                          <option value="1000046">IndusStox 3-in-1 Account</option>
+                          <option value="1000055">IndusStox 3-in-1 Account</option>
+                          <option value="1266">Insurance</option>
+                          <option value="1289">Interest Rate Swap</option>
+                          <option value="1270">International Remittance</option>
+                          <option value="1295">Internet Shopping Card</option>
+                          <option value="1000081">Investment</option>
+                          <option value="1265">Investment Banking</option>
+                          <option value="1320">Jana El Omr</option>
+                          <option value="1310">Jeel Al Arabi Account</option>
+                          <option value="1000109">Junior Savings Account</option>
+                          <option value="1319">Lamma Yekbarou</option>
+                          <option value="1202">Letter Of Credit</option>
+                          <option value="151">Letter of Credit</option>
+                          <option value="1242">Life Insurance</option>
+                          <option value="1271">Local Remittance</option>
+                          <option value="1166">Mandiri Credit Card</option>
+                          <option value="1000104">Mandiri Gold GPN Debit Card</option>
+                          <option value="1168">Mandiri GPN Debit Card</option>
+                          <option value="145">Mandiri GPN Debit Card</option>
+                          <option value="1000103">Mandiri Individual Debit Card</option>
+                          <option value="137">Mandiri multipurpose mortgage</option>
+                          <option value="1234">Mandiri Plan Deposits</option>
+                          <option value="1229">Mandiri Savings Account</option>
+                          <option value="1000102">Mandiri Shopee Credit Card</option>
+                          <option value="158">Marine Insurance</option>
+                          <option value="1316">Master Card Titanium Credit Card</option>
+                          <option value="1000108">MaxSave Account</option>
+                          <option value="1000057">Mazaya</option>
+                          <option value="1000085">Mazzaya Social Housing Finance Scheme</option>
+                          <option value="1000016">Medium &amp; Heavy</option>
+                          <option value="162">Mobile Banking</option>
+                          <option value="163">Mobile Banking</option>
+                          <option value="1283">Mortgage Finance</option>
+                          <option value="1236">Mortgage Finance</option>
+                          <option value="138">Mortgage Top Up</option>
+                          <option value="1000121">Multi Currency Account</option>
+                          <option value="135">Mutual Fund</option>
+                          <option value="1000114">MY1 Account</option>
+                          <option value="1000068">MyHassad Certificates</option>
+                          <option value="1000067">MyHassad Savings Account</option>
+                          <option value="1000069">MyHassad Winners</option>
+                          <option value="1305">Nashama Visa Credit Card</option>
+                          <option value="1293">Non Resident Jordanians Home Loan</option>
+                          <option value="1000030">OFF-PLAN</option>
+                          <option value="1000034">OFF-PLAN</option>
+                          <option value="1000117">Ordinary Fixed Deposit</option>
+                          <option value="1000119">P.A.Y.S. Fixed Deposit</option>
+                          <option value="1000018">Passenger</option>
+                          <option value="1237">PayPal Account</option>
+                          <option value="1000063">Pearl Rewards</option>
+                          <option value="143">Personal Accident insurance</option>
+                          <option value="1259">Personal Auto Finance</option>
+                          <option value="1257">Personal Finance</option>
+                          <option value="1000078">Personal Finance</option>
+                          <option value="1000082">Personal Finance</option>
+                          <option value="136">Personal Loan</option>
+                          <option value="1173">Peso Time Deposits</option>
+                          <option value="124">Phone Banking</option>
+                          <option value="1227">Platinum ATM Card</option>
+                          <option value="1169">Practical Master Card</option>
+                          <option value="1000115">Premier Current Account</option>
+                          <option value="1000009">Prepaid Card</option>
+                          <option value="1176">Product</option>
+                          <option value="1181">Project Loan</option>
+                          <option value="157">Property Insurance</option>
+                          <option value="1322">Rahet El-Bal</option>
+                          <option value="1000091">RBI Bonds</option>
+                          <option value="1000033">REDF and Ministry of Housing</option>
+                          <option value="1000029">REDF and Ministry of Housing</option>
+                          <option value="129">Renminbi Savings Account</option>
+                          <option value="1329">Safe Deposit Boxes</option>
+                          <option value="125">Salary Account</option>
+                          <option value="1274">Sarie</option>
+                          <option value="1000045">Saving Account</option>
+                          <option value="1308">Saving Account</option>
+                          <option value="112">Savings Account</option>
+                          <option value="1000071">Savings Bank Deposit Products</option>
+                          <option value="1000118">Senior Fixed Deposit</option>
+                          <option value="1000032">SHL Ijarah</option>
+                          <option value="1000028">SHL Ijarah</option>
+                          <option value="1284">Short Term Loan</option>
+                          <option value="1000017">Small &amp; Light</option>
+                          <option value="1000113">Smart Account</option>
+                          <option value="1000092">Sovereign Gold Bonds</option>
+                          <option value="1000010">Srilanka Debit Cards</option>
+                          <option value="1000026">SUV</option>
+                          <option value="1183">Term Deposit</option>
+                          <option value="1000073">Term Deposit Product</option>
+                          <option value="1286">Term Loan</option>
+                          <option value="146">Term Loans</option>
+                          <option value="1000036">Tesco Bank ClubCard MasterCard</option>
+                          <option value="1000039">Tesco Bank ClubCard MasterCard</option>
+                          <option value="1000043">Test 1</option>
+                          <option value="1253">Titanium Business Card</option>
+                          <option value="1251">Titanium Card</option>
+                          <option value="1304">Together Platinum Credit Card</option>
+                          <option value="1215">Toyota Camry</option>
+                          <option value="1221">Toyota Hilux</option>
+                          <option value="152">Trade Settlement</option>
+                          <option value="1324">Transfer (Outward &amp; Inward)</option>
+                          <option value="142">Travel Insurance</option>
+                          <option value="1244">Travel Insurance</option>
+                          <option value="1225">Trust Account</option>
+                          <option value="133">Unit Investment Trust Fund</option>
+                          <option value="1000074">USD Step Up Deposit Product</option>
+                          <option value="1000019">Used</option>
+                          <option value="1273">VIP Services</option>
+                          <option value="1314">Visa Classic Credit Card</option>
+                          <option value="1294">Visa Debit Card</option>
+                          <option value="1313">Visa Electron</option>
+                          <option value="1315">Visa Gold Credit Card</option>
+                          <option value="1317">Visa Platinum Credit Card</option>
+                          <option value="1226">Watani Express Account</option>
+                          <option value="1231">Watani Super Account</option>
+                          <option value="1230">Wealth Account</option>
+                          <option value="147">Working Capital Loan</option>
+                          <option value="1000061">World Card</option>
+                          <option value="1249">World Master Card</option>
+                          <option value="1268">XY 100</option>
+                          <option value="1000011">xyz</option>
+                      </select><input id="ProductName" name="ProductName" type="hidden" style="width:100px" value="Aaelaty Bi Aman" /> </td>
+              </tr>
+              <tr>
+                          <td hidden> Status Code </td>
+                          <td>
+                             <select id="StatusCode" name="StatusCode" style="width:100px" hidden>
+                                <option value= "100017" selected>Assigned to FFU</option>
+                              </select>
+                          </td>
+                          <td hidden> Priority :&nbsp; </td>
+                          <td>
+                             <select id="CasePriority" name="CasePriority" style="width:100px" hidden>
+                                <option value= "0">None</option>
+                                <option value= "1" selected>ASAP</option>
+                                <option value= "2">High</option>
+                                <option value= "3">Normal</option>
+                                <option value= "4">Low</option>
+                             </select>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td> CaseType :&nbsp; </td>
+                          <td>
+                             <select id="CaseType" name="CaseType" style="width:100px">
+                                <option value= "0"></option>
+                                <option value= "1">Query</option>
+                                <option value= "2">Request</option>
+                                <option value= "3">Complaint</option>
+                             </select>
+                          </td>
+                          <td hidden> CaseOrigin :&nbsp; </td>
+                          <td hidden>
+                             <select id="CaseOrigin" name="CaseOrigin" style="width:100px">
+                                <option value= "0"></option>
+                                <option value= "1">Email</option>
+                                <option value= "7">email</option>
+                                <option value= "6">Referal</option>
+                                <option value= "2" selected>Web Form</option>
+                                <option value= "3">Phone</option>
+                                <option value= "4">Fax</option>
+                                <option value= "5">Meeting</option>
+                             </select>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td> CaseReason :&nbsp; </td>
+                          <td>
+                             <select id="CaseReason" name="CaseReason" style="width:100px">
+                                <option value= "0"></option>
+                                <option value= "1">New Problem</option>
+                                <option value= "2">Existing Problem</option>
+                                <option value= "6">New Request</option>
+                                <option value= "3">Complex Functionality</option>
+                                <option value= "4">Unclear Instructions</option>
+                                <option value= "5">Not Trained</option>
+                             </select>
+                          </td>
+                          <td hidden> CaseCategory :&nbsp; </td>
+                          <td hidden>
+                             <select id="CaseSolutionCategory" name="CaseSolutionCategory" style="width:100px" hidden>
+                                <option value= "316">Application Issue</option>
+                                <option value= "1272">Bantahan Transaksi</option>
+                                <option value= "317">Biaya</option>
+                                <option value= "1273">Bill Payment</option>
+                                <option value= "318">Bill Payment - Banding</option>
+                                <option value= "319">Bill Payment - Cancel/Batalkan Transaksi</option>
+                                <option value= "320">Bill Payment - Card Trapping/Kartu Tertelan</option>
+                                <option value= "321">Bill Payment - Dispute/Bantahan Transaksi</option>
+                                <option value= "322">Bill Payment - Double/Lebih Bayar/Debet</option>
+                                <option value= "323">Bill Payment - Gagal Beli/Bayar/Top-Up</option>
+                                <option value= "324">Bill Payment - Indikasi Penipuan</option>
+                                <option value= "325">Bill Payment - Skimming</option>
+                                <option value= "326">Card Delivery - Belum terima kartu</option>
+                                <option value= "327">Card Delivery - Hold Kartu</option>
+                                <option value= "328">Card Delivery - Resend Kartu - Posisi Retur</option>
+                                <option value= "329">Card Delivery - Speed-Up Delivery</option>
+                                <option value= "330">CCTV</option>
+                                <option value= "331">INCOMING TT</option>
+                                <option value= "332">Informasi - Informasi Lokasi ATM tidak update</option>
+                                <option value= "333">Informasi - Informasi Lokasi CSM tidak update</option>
+                                <option value= "334">Infrastuktur</option>
+                                <option value= "312">Inquiry</option>
+                                <option value= "335">Kartu Keluar</option>
+                                <option value= "336">Kartu Rusak</option>
+                                <option value= "337">Kartu Tidak Keluar</option>
+                                <option value= "338">Konversi KAPEL</option>
+                                <option value= "339">Layanan Cabang</option>
+                                <option value= "340">Livin' Investasi</option>
+                                <option value= "341">Livin' Investasi - Transactional</option>
+                                <option value= "342">Livin' SUKHA</option>
+                                <option value= "343">Livin' SUKHA - Banding</option>
+                                <option value= "344">Livin' SUKHA - Cancel/Batalkan Transaksi</option>
+                                <option value= "345">Livin' SUKHA - Dispute/Bantahan Transaksi</option>
+                                <option value= "346">Livin' SUKHA - Double/Lebih Bayar/Debet</option>
+                                <option value= "347">Mandiri e-FX Mobile - Banding</option>
+                                <option value= "348">Mandiri e-FX Mobile - Cancel/Batalkan Transaksi</option>
+                                <option value= "349">Mandiri e-FX Mobile - Dispute/Bantahan Transaksi</option>
+                                <option value= "350">Mandiri e-FX Mobile - Double/Lebih Bayar/Debet</option>
+                                <option value= "351">Mandiri e-FX Mobile - Gagal Beli/Bayar/Top-Up</option>
+                                <option value= "352">Others</option>
+                                <option value= "353">OUTGOING TT</option>
+                                <option value= "354">Pelayanan Staff</option>
+                                <option value= "355">QR Bayar - CPM/Create QR</option>
+                                <option value= "356">QR Bayar - CPM/Create QR - Banding</option>
+                                <option value= "357">QR Bayar - CPM/Create QR - Dispute/Bantahan Transaksi</option>
+                                <option value= "358">QR Bayar - CPM/Create QR - Double/Lebih Bayar/Debet</option>
+                                <option value= "359">QR Bayar - CPM/Create QR - Indikasi Penipuan</option>
+                                <option value= "360">QR Bayar - MPM/Scan - Banding</option>
+                                <option value= "361">QR Bayar - MPM/Scan - Cancel/Batalkan Transaksi</option>
+                                <option value= "362">QR Bayar - MPM/Scan - Dispute/Bantahan Transaksi</option>
+                                <option value= "363">QR Bayar - MPM/Scan - Double/Lebih Bayar/Debet</option>
+                                <option value= "364">QR Bayar - MPM/Scan - Gagal Beli/Bayar/Top-Up</option>
+                                <option value= "365">QR Bayar - MPM/Scan - Indikasi Penipuan</option>
+                                <option value= "366">Rekening Koran</option>
+                                <option value= "367">Reksadana</option>
+                                <option value= "371">Request</option>
+                                <option value= "368">Setor Tunai - Banding</option>
+                                <option value= "369">Setor Tunai - Gagal Setor</option>
+                                <option value= "370">Setor Tunai - Salah Setor</option>
+                                <option value= "372">Status Kartu - Blokir</option>
+                                <option value= "373">Tarik Tunai - Banding</option>
+                                <option value= "374">Tarik Tunai - Card Trapping/Kartu Tertelan</option>
+                                <option value= "375">Tarik Tunai - Dispute/Bantahan Transaksi</option>
+                                <option value= "376">Tarik Tunai - Gagal Tarik Tunai</option>
+                                <option value= "377">Tarik Tunai - Indikasi Penipuan</option>
+                                <option value= "378">Tarik Tunai - Kondisi Fisik Uang</option>
+                                <option value= "379">Tarik Tunai - Skimming</option>
+                                <option value= "380">Tarik Tunai + Purchase - Banding</option>
+                                <option value= "381">Tarik Tunai + Purchase - Dispute/Bantahan Transaksi</option>
+                                <option value= "382">Tarik Tunai + Purchase - Gagal Tarik Tunai + Purchase</option>
+                                <option value= "383">Tarik Tunai + Purchase - Indikasi Penipuan</option>
+                                <option value= "384">Top-Up</option>
+                                <option value= "1271">Top-Up</option>
+                                <option value= "385">Transaksi</option>
+                                <option value= "386">Transaksi Online</option>
+                                <option value= "1274">Transfer</option>
+                                <option value= "387">Transfer - Banding</option>
+                                <option value= "388">Transfer - Card Trapping/Kartu Tertelan</option>
+                                <option value= "389">Transfer - Dispute/Bantahan Transaksi</option>
+                                <option value= "390">Transfer - Gagal Transfer</option>
+                                <option value= "391">Transfer - Indikasi Penipuan</option>
+                                <option value= "392">Transfer - Salah Transfer</option>
+                                <option value= "393">Transfer - Skimming</option>
+                                <option value= "394">Transfer Valas/Digiremittance - Gagal Transfer</option>
+                                <option value= "8" selected>Complaint</option>
+                             </select>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td hidden> CaseLayout :&nbsp; </td>
+                          <td><input type="text" id="Layout" name="Layout" style="width:100px" / hidden></td>
+                          <td hidden> Layout </td>
+                          <td hidden>
+                             <select id="Layout" name="Layout" style="width:100px" hidden>
+                                 <option value= "102676" selected>Service Requests</option></select>
+
+                          </td>
+                           <td hidden>
+                           <input type="text" id="Company" name="Company" value="Bpk Sukarno Budi"/>
+
+                           </td>
+                       </tr>
+              <tr>
+                  <td>Date of Report :&nbsp;</td>
+                  <td> <input type="text" id="cust_11540" name="cust_11540" value="" style="width:100px" /> </td>
+
+              </tr>
+              <tr>
+                  <td>Police Report Number :&nbsp;</td>
+                  <td> <input type="text" id="cust_11539" name="cust_11539" value="" style="width:100px" /> </td>
+
+              </tr>
+              <tr>
+                  <td>Lost or Stolen Details :&nbsp;</td>
+                  <td> <input type="text" id="cust_11538" name="cust_11538" value="" style="width:100px" /> </td>
+
+              </tr>
+              <tr>
+                  <td>Please Specify :&nbsp;</td>
+                  <td> <input type="text" id="cust_11537" name="cust_11537" value="" style="width:100px" /> </td>
+                  <td>Reason for Cancellation :&nbsp;</td>
+                  <td> <select id="cust_11536" name="cust_11536" style="width:100px">
+                          <option value="0">-- Select Item --</option>
+                          <option value="Cardholder request">Cardholder request</option>
+                          <option value="Lost or stolen">Lost or stolen</option>
+                          <option value="Card expired">Card expired</option>
+                          <option value="Dissatisfaction with services">Dissatisfaction with services</option>
+                          <option value="Other (please specify)">Others</option>
+                      </select> </td>
+              </tr>
+              <tr>
+                  <td>Expiry Date :&nbsp;</td>
+                  <td> <input type="text" id="cust_11535" name="cust_11535" value="" style="width:100px" /> </td>
+              </tr>
+              <tr>
+                  <td>Card Type :&nbsp;</td>
+                  <td> <select id="cust_11534" name="cust_11534" style="width:100px">
+                          <option value="0">-- Select Item --</option>
+                          <option value="Visa">Visa</option>
+                          <option value="Mastercard">Mastercard</option>
+                      </select> </td>
+
+              </tr>
+              <tr>
+                  <td>Card Type_RHB :&nbsp;</td>
+                  <td> <select id="cust_11517" name="cust_11517" style="width:100px">
+                          <option value="0">-- Select Item --</option>
+                          <option value="Visa">Visa</option>
+                          <option value="Master Card">Master Card</option>
+                      </select> </td>
+              </tr>
+              <tr>
+                  <td>Address _rhb :&nbsp;</td>
+                  <td> <input type="text" id="cust_11530" name="cust_11530" value="" style="width:100px" /> </td>
+                  <td>Credit Card No :&nbsp;</td>
+                  <td> <input type="text" id="cust_3836" name="cust_3836" value="" style="width:100px" /> </td>
+              </tr>
+              <tr>
+                  <td>City2 :&nbsp;</td>
+                  <td> <input type="text" id="cust_3106" name="cust_3106" value="" style="width:100px" /> </td>
+                  <td>Zip Code2 :&nbsp;</td>
+                  <td> <input type="text" id="cust_3103" name="cust_3103" value="" style="width:100px" /> </td>
+              </tr>
+              <tr>
+                  <td>State2 :&nbsp;</td>
+                  <td> <input type="text" id="cust_3100" name="cust_3100" value="" style="width:100px" /> </td>
+                  <td>NewMobileNumber :&nbsp;</td>
+                  <td> <input type="text" id="cust_2951" name="cust_2951" value="" style="width:100px" /> </td>
+              </tr>
+              <tr>
+                  <td>Cardholder NameMSCT :&nbsp;</td>
+                  <td> <input type="text" id="cust_2405" name="cust_2405" value="" style="width:100px" /> </td>
+                  <td>Email ID :&nbsp;</td>
+                  <td> <input type="text" id="cust_30" name="cust_30" value="" style="width:100px" /> </td>
+              </tr>
+              <tr height="10px">
+                  <td>&nbsp;</td>
+              </tr>
+              <tr>
+                  <td colspan="4" align="center"> <input type="submit" name="submit" id="submit" value="Submit" onclick="return IsValidForm();"> </td>
+              </tr>
+          </table>
+          </td>
+          </tr>
+          </table>
+      </form> -->
+        <script >
+ function UpdateProductName()
+{
+ var prodObj = document.getElementById('Product');
+ var prodNameObj = document.getElementById('ProductName');
+ prodNameObj.value = prodObj.options[prodObj.selectedIndex].text;
+}
+
+      
+ function IsValidForm() 
+ {
+ var errMessage = '';
+   if(document.getElementById('Subject') != null) 
+ {
+ if (document.getElementById('Subject').value == '') 
+ { 
+ errMessage = 'Enter Subject.\n'; 
+ }
+ }
+ else 
+ {
+ errMessage = 'Subject Field is missing.\n';
+ }
+	if(document.getElementById('Company') != null) 
+ {
+ 
+	if ( errMessage != '' ){ alert(errMessage); return false; }
+ return true; 
+ }
+ }
+        </script>
+    </body>
+
+</html>

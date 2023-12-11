@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    
+    
+
+<HEAD>
+    <title>Create OnLIne Case</title>
+    <link rel="stylesheet" type="text/css" href="./css/style3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</HEAD>
+    
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;
+
+    }
+
+    /* .header {
+      /* background-color: #70cde3;  
+      padding: 10px; 
+    } */
+
+    .logo {
+      width: 150px; 
+      height: auto; 
+      display: block; 
+    }
+  </style>
+
+<body>
+ 
+  
+    
+    <!-- <div class="header">
+  <img class="logo" src="Logo RHB.png" alt="Your Logo">
+</div> -->
+
+<body style="background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;" onload="lostStolen()">
+    <!-- <div class="header" style="width: 100%;height:3vh;border-collapse:collapse;margin:auto;align-content: space-between;">
+        <img src="../images/RHBLogo.png" style="width: 15%;">
+         <div class="header-right" style="margin: 5px 40px 0px 0px;">
+            <a>
+                <i style="color: white;"class="fa fa-home"> Home
+                </i>
+            </a>
+            <a>
+                <i style="color: white;"class="fa fa-qrcode"> Scan QR
+                </i>
+            </a>
+         </div>             
+    </div> 
+
+    <hr> -->
+
+    
+<div class="container">
+    <img src="images/RHBLogo.png" class="img">
+    
+    <!-- <div class="heading">Card Terminate Portal</div> -->
+   <form id="OnLineCaseForm" method="post" action="https://presales.businessbywire.com/appgb8/ProcessAnonymous/OnlineLeadCapture?x=s2rsuht9cnx3lyqqcnda6spl7xqlzqe2q8rpxsggexqrtsb79plj2thmthlv35jq784ut4pwm3b85uwrrkdenh63z9qpumudlzysns32wawwcszfywva" class="form">
+       <input type="hidden" name="debug" value="1"> 
+                <input type="hidden" name="debugEmail" value="marketing@businessnext.co.in"> <input type=hidden name="SuccessReturnURL" value="http://www.rhbgroup.com/index.html"> <input type=hidden name="FailureReturnURL" value="http://www.google.com">
+        <div>
+            <div class="head">
+                <div class="headData"><img src="./images/holderName.png" alt=""></div>
+                <div class="headData"><h3><label class="input_label" style="font-size:18px;">
+                    Cardholder Information:
+                    </label></h3></div>                
+            </div>
+            <hr>
+            
+
+            <label class="input_label" for="email_field">Cardholder Name</label>
+            <input class="input" type="text" name="cust_2405" id="cust_2405" placeholder="Cardholder Name" value="Mr. Izzuan" readonly>
+
+            <label class="input_label" for="email_field">Address</label>
+            <input class="input" type="text" name="cust_11530" id="cust_11530" placeholder="Address" value="Kantin Kamsis Tun Dr Ismail Jln Temerloh" readonly>
+
+            <label class="input_label" for="email_field">Email ID</label>
+            <input class="input" type="text" name="cust_2955" id="cust_2955" placeholder="Email ID" value="izzuan@gmail.com" readonly>
+
+            <label class="input_label" for="email_field">Mobile Number</label>
+            <input class="input" type="text" name="cust_2951" id="cust_2951" placeholder="Mobile Number" value="602887938939" readonly>
+
+        </div>
+       
+        <div>
+            <div class="head">
+                <div class="headData"><img src="./images/creditIcon.png" alt=""></div>
+                <div class="headData"><h3><label class="input_label" style="font-size:18px;">
+                    Credit Card Details:
+                    </label></h3></div>
+            </div>
+            <hr>
+
+            
+            
+            <label class="input_label" for="email_field" hidden>Select Card</label>
+            <select class="input" id="Product" name="Product" onchange="UpdateProductName();" hidden>
+                    <option value="0">-- Select --</option>
+                <option value="1006133">RHB Premier Visa Infinite Credit Card</option>
+                <option value="1006134" selected>RHB Visa Infinite Credit Card</option>
+                <option value="1006135">RHB Visa Signature Credit Card</option>     
+            </select>
+            
+            <label class="input_label" for="email_field">Credit Card No</label>
+            <input class="input" type="text" name="cust_3836" id="cust_3836" placeholder="Credit Card No" maxlength="16">
+            
+            <label class="input_label" for="email_field">Card Type</label>
+            <select class="input" name="cust_11534" id="cust_11534">
+                    <option value="0">Card Type</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+            </select>
+
+            <label class="input_label" for="email_field">Expiry Date</label>
+            <input class="input" type="month" name="cust_11535" id="cust_11535" placeholder="Expiry Date">
+
+        </div>
+        <div>
+
+            <div class="head">
+                <div class="headData"><img src="./images/cancellationIcon.png" alt=""></div>
+                <div class="headData"><h3><label class="input_label" style="font-size:18px;">
+                    Reason for Cancellation:
+                    </label></h3></div>
+            </div>
+            <hr>
+           
+
+            <label class="input_label" for="email_field">Reason for Cancellation</label>
+            <select  class="input" name="cust_11536" id="cust_11536" onchange="lostStolen()">
+                    <option value="0">Reason for Cancellation</option>
+                    <option value="Cardholder request">Cardholder request</option>
+                    <option value="Lost or stolen">Lost or stolen</option>
+                    <option value="Card expired">Card expired</option>
+                    <option value="Dissatisfaction with services">Dissatisfaction with services</option>
+                    <option value="Other (please specify)">Others</option>
+            </select>
+
+          
+
+            
+            <label class="input_label" for="email_field" id="othlbl">Please Specify</label>
+            <input class="input" type="text" name="cust_11537" id="cust_11537" placeholder="Please Specify">
+            
+
+        </div>
+        <div id="lostStolenDetails" class="lostStolenDetails">
+                 
+            <div class="head">
+                <div class="headData"><img src="./images/stolen.png" alt=""></div>
+                <div class="headData"><h3><label class="input_label" style="font-size:18px;">
+                    Lost or Stolen Details:
+                    </label></h3></div>
+            </div>
+            <hr>
+
+            <label class="input_label" for="email_field">Police Report Number</label>
+            <input class="input" type="text" name="cust_11539" id="cust_11539" placeholder="Police Report Number">
+            
+            <label class="input_label" for="email_field">Date of Report</label>
+            <input class="input" type="date" name="cust_11540" id="cust_11540" placeholder="Date of Report">
+
+        </div>
+
+        <div>
+
+            <hr>
+
+            <label class="input_label" for="email_field" hidden>Subject</label>
+            <input class="input" type="text" name="Subject" id="Subject" placeholder="Subject" value="Complaint - Credit Card Related - Terminate Credit Card" hidden>
+            
+            <input id="ProductName" name="ProductName" type="hidden" style="width:100px" value="Aaelaty Bi Aman" />
+            <label class="input_label" for="email_field" hidden>CaseType</label>
+            <select class="input" id="CaseType" name="CaseType" hidden>
+                <option value="0">CaseType</option>
+                <option value="1">Query</option>
+                <option value="2">Request</option>
+                <option value="3" selected>Complaint</option>
+            </select>
+            <label class="input_label" for="email_field" hidden>CaseReason</label>
+            <select class="input" name="CaseReason" hidden>
+                <option value="0">CaseReason</option>
+                <option value="1" selected>New Problem</option>
+                <option value="2">Existing Problem</option>
+                <option value="6">New Request</option>
+                <option value="3">Complex Functionality</option>
+                <option value="4">Unclear Instructions</option>
+                <option value="5">Not Trained</option>
+            </select>
+            <select id="StatusCode" name="StatusCode" style="width:100px" hidden>
+                <option value="1" selected>New</option>
+            </select>
+            <select id="CasePriority" name="CasePriority" style="width:100px" hidden>
+                <option value="0">None</option>
+                <option value="1" selected>ASAP</option>
+                <option value="2">High</option>
+                <option value="3">Normal</option>
+                <option value="4">Low</option>
+            </select>
+            <select id="CaseType" name="CaseType" style="width:100px" hidden>
+                <option value="0"></option>
+                <option value="1">Query</option>
+                <option value="2">Request</option>
+                <option value="3" selected>Complaint</option>
+            </select>
+            <select id="CaseOrigin" name="CaseOrigin" style="width:100px" hidden>
+                <option value="0"></option>
+                <option value="1">Email</option>
+                <option value="7">email</option>
+                <option value="6">Referal</option>
+                <option value="2" selected>Web Form</option>
+                <option value="3">Phone</option>
+                <option value="4">Fax</option>
+                <option value="5">Meeting</option>
+            </select>
+            <select id="CaseReason" name="CaseReason" style="width:100px" hidden>
+                <option value="0"></option>
+                <option value="1" selected>New Problem</option>
+                <option value="2">Existing Problem</option>
+                <option value="6">New Request</option>
+                <option value="3">Complex Functionality</option>
+                <option value="4">Unclear Instructions</option>
+                <option value="5">Not Trained</option>
+            </select>
+            <select id="CaseSolutionCategory" name="CaseSolutionCategory" style="width:100px" hidden>
+                <option value="8" selected>Complaint</option>
+            </select>
+            <select id="Layout" name="Layout" style="width:100px" hidden>
+                <option value= "101275" selected>Service Request EWB Process</option>
+            </select>
+            <input type="text" id="Company" name="Company" value="Mr. Izzuan" hidden/>
+             <input type="text" id="Territory" name="Territory" value="Kuala Lumpur" hidden/>
+        </div>
+
+        
+         <input class="login-button" type="submit" name="submit" id="submit" value="Submit" onclick="return IsValidForm();">
+      
+<!--        -->
+        
+    </form>
+    
+      <span class="agreement"><a href="#">Learn user licence agreement</a></span>
+  </div>    
+    
+    
+<script >
+ function UpdateProductName() {
+    var prodObj = document.getElementById('Product');
+    var prodNameObj = document.getElementById('ProductName');
+    prodNameObj.value = prodObj.options[prodObj.selectedIndex].text;
+}
+
+function UpdateTerritoryName() {
+    var terrObj = document.getElementById('Territory');
+    var terrNameObj = document.getElementById('TerritoryName');
+    terrNameObj.value = terrObj.options[terrObj.selectedIndex].text;
+}
+
+function IsValidForm() {
+    var errMessage = '';
+    if (document.getElementById('Subject') != null) {
+        if (document.getElementById('Subject').value == '') {
+            errMessage = 'Enter Subject.\n';
+        }
+    } else {
+        errMessage = 'Subject Field is missing.\n';
+    }
+    if (document.getElementById('Company') != null) {
+        if (document.getElementById('Company').value == '') {
+            errMessage += 'Enter Company.\n';
+        }
+    } else {
+        errMessage += 'Company Field is missing.\n';
+    }
+    if (errMessage != '') {
+        alert(errMessage);
+        return false;
+    }
+    return true;
+}
+
+
+ function lostStolen() {
+  var x = document.getElementById('cust_11536').value;
+  var y = document.getElementById("lostStolenDetails");
+     var z = document.getElementById("othlbl");
+     var a = document.getElementById("cust_11537");
+ 
+  if (x === "Lost or stolen") {
+      y.style.display = "block";
+      z.style.display = "none";
+      a.style.display = "none";
+  } else if (x === "Other (please specify)")
+  {
+      y.style.display = "none";
+      z.style.display = "block";
+      a.style.display = "block";
+  }
+     else
+  {
+      y.style.display = "none";
+      z.style.display = "none";
+      a.style.display = "none";
+  }
+    }
+
+
+</script>
+</body>
+
+</html>
