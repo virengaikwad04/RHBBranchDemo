@@ -7,23 +7,74 @@
     <link rel="stylesheet" type="text/css" href="./css/QRCode.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+    <style>
+        body {
+            overflow-y: hidden;
+            background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .card {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .button-class {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f79184;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button-class:hover {
+            background-color: #ff665e;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
     <title>QR Code</title>
 </head>
-<body style="overflow-y: hidden;background: transparent linear-gradient(0deg, #05A1B1 0%, #f79184 100%) 0% 0% no-repeat padding-box;">
-   
-
+<body>
     <main>
-        <img src="./images/RHBLogo.png" class="img">
-
-        <div class="card" style="padding-top: 40px;">
+        <div class="card">
+            <img src="./images/RHBLogo.png" class="img">
             <h2>Please Scan QR Code For Further Process</h2>
-           <div>
-            <img src="./images/QR_AC.png" alt="QR_AC" style="width: 200px;
-            height: auto;">
-           </div>
-                      
+            <div>
+                <img src="./images/QR_AC.png" alt="QR_AC" style="width: 200px; height: auto;">
+            </div>
+            <!-- <div class="button-container">
+                <button onclick="window.location.href = './thank.html';" class="button-class">Click here to Proceed</button>
+            </div> -->
         </div>
     </main>
-
 </body>
 </html>
